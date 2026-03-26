@@ -4,6 +4,16 @@
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
 
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error/404.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error/500.jsp</location>
+    </error-page>
+
     <listener>
         <listener-class>com.tomcat.tomcat.AppLifecycleListener</listener-class>
     </listener>
@@ -46,6 +56,16 @@
     <servlet-mapping>
         <servlet-name>viewServlet</servlet-name>
         <url-pattern>/view</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>errorServlet</servlet-name>
+        <servlet-class>com.tomcat.tomcat.ErrorServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>errorServlet</servlet-name>
+        <url-pattern>/error-test</url-pattern>
     </servlet-mapping>
 
 </web-app>
