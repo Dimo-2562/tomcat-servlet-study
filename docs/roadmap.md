@@ -78,7 +78,23 @@
 - 운영 관점 차이
 - 디버깅 포인트 차이
 
-## 8. 톰캣 내부 구조 이해하기 (12단계)
+## 8. Spring MVC + 외장 톰캣 (11단계)
+
+Spring Boot 없이 순수 Spring MVC를 외장 톰캣에 배포한다.
+
+- `WebApplicationInitializer`로 `DispatcherServlet` 등록 (`web.xml` 없이)
+- `@Controller`, `@RequestMapping`으로 요청 처리
+- `web.xml` 방식과 Java Config 방식 비교
+
+## 9. Spring Boot WAR 배포 (12단계)
+
+Spring Boot 앱을 JAR가 아닌 WAR로 빌드해서 외장 톰캣에 배포한다.
+
+- `SpringBootServletInitializer` 역할
+- 내장 톰캣 JAR 실행 vs 외장 톰캣 WAR 배포 차이
+- 설정 책임 위치 차이
+
+## 10. 톰캣 내부 구조 이해하기 (13단계)
 
 서블릿과 스프링을 다 다룬 뒤 톰캣 자체를 들여다본다.
 
