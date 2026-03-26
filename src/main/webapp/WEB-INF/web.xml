@@ -4,6 +4,16 @@
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
 
+    <filter>
+        <filter-name>loggingFilter</filter-name>
+        <filter-class>com.tomcat.tomcat.LoggingFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>loggingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
     <servlet>
         <servlet-name>helloServlet</servlet-name>
         <servlet-class>com.tomcat.tomcat.HelloServlet</servlet-class>
