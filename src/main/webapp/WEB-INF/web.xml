@@ -38,4 +38,14 @@
         <url-pattern>/session</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>viewServlet</servlet-name>
+        <servlet-class>com.tomcat.tomcat.ViewServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>viewServlet</servlet-name>
+        <url-pattern>/view</url-pattern>
+    </servlet-mapping>
+
 </web-app>
