@@ -28,4 +28,14 @@
         <url-pattern>/hello-servlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>sessionServlet</servlet-name>
+        <servlet-class>com.tomcat.tomcat.SessionServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>sessionServlet</servlet-name>
+        <url-pattern>/session</url-pattern>
+    </servlet-mapping>
+
 </web-app>
