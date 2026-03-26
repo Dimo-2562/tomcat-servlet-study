@@ -1,6 +1,8 @@
 plugins {
     id 'java'
     id 'war'
+    id 'org.springframework.boot' version '3.4.4'
+    id 'io.spring.dependency-management' version '1.1.7'
 }
 
 group 'com.tomcat'
@@ -8,10 +10,6 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
-}
-
-ext {
-    junitVersion = '5.13.2'
 }
 
 sourceCompatibility = '21'
@@ -22,11 +20,11 @@ tasks.withType(JavaCompile) {
 }
 
 dependencies {
-    compileOnly('jakarta.servlet:jakarta.servlet-api:6.1.0')
-    implementation('org.springframework:spring-webmvc:6.2.5')
+    compileOnly('jakarta.servlet:jakarta.servlet-api')
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
 
-    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
 
 test {
